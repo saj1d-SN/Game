@@ -1,0 +1,89 @@
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for the game container */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.container {
+  text-align: center;
+  padding: 20px; /* Added padding for better spacing */
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Styling for the Tic Tac Toe board */
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates a 3x3 grid */
+  gap: 10px; /* Space between cells */
+  width: 90vw; /* Responsive width */
+  max-width: 400px; /* Maximum width for larger screens */
+  margin: auto;
+}
+
+.cell {
+  position: relative;
+  padding: 0; /* Remove padding to control size */
+  border: 2px solid #333;
+  background-color: #fff;
+  font-size: 3em; /* Set font size */
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  aspect-ratio: 1; /* Maintains a square aspect ratio */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.cell:hover {
+  background-color: #e0e0e0; /* Light gray background on hover */
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 1.5em; /* Slightly larger for visibility */
+  color: #333;
+}
+
+.restart {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em; /* Larger button text */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.restart:hover {
+  background-color: #555; /* Darker gray on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .cell {
+    font-size: 2em; /* Smaller font size on smaller screens */
+  }
+  .message {
+    font-size: 1.2em; /* Smaller message text */
+  }
+  .restart {
+    font-size: 1em; /* Smaller button text */
+  }
+}
